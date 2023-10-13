@@ -7,12 +7,6 @@
 #include <ctime>
 #include <chrono>
 
-/*
-    ScriptHookV.dll
-    std::vector<unsigned char> searchPattern = { 0x83, 0x38, 0x00, 0x74, 0x3A }; // jz
-    std::vector<unsigned char> replacementBytes = { 0x83, 0x38, 0x00, 0xEB, 0x3A }; // jmp
-*/
-
 std::string GetCurrentLocalTime() {
     std::time_t currentTime = std::time(nullptr);
     std::tm localTime = *std::localtime(&currentTime);
